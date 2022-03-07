@@ -1,0 +1,24 @@
+// Custom styles
+// 1. General
+//
+
+// 1. General
+// --------------------
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-family: "Arial", "Montserrat", sans-serif !important;
+}
+
+.top-bar-title {
+  background: transparent;
+
+  &::before {
+    content: none;
+  }
+}
