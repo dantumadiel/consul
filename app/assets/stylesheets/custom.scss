@@ -2,3 +2,38 @@
 //
 // You can also create SCSS files in the app/assets/stylesheets/custom/
 // folder and they will be loaded automatically.
+// 1. General
+// 2. Admin
+//
+
+// 1. General
+// --------------------
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-family: "Arial", "Montserrat", sans-serif !important;
+}
+
+.top-bar-title {
+  background: transparent;
+
+  &::before {
+    content: none;
+  }
+}
+
+// 2. Admin
+// --------------------
+
+.admin .top-links {
+  justify-content: right;
+
+  a {
+    flex-grow: unset;
+  }
+}
