@@ -1,0 +1,44 @@
+<footer>
+  <div class="row">
+    <div class="small-12 medium-5 column">
+      <h1 class="logo">
+        <%= image_tag(image_path_for("logo_footer.png"), alt: "") %>
+      </h1>
+
+      <p class="info">
+        <%= sanitize(content_block("footer", I18n.locale)) %>
+      </p>
+    </div>
+
+    <div class="small-12 medium-5 column social">
+      <h2><%= t("layouts.footer.contact_title") %></h2>
+
+      <p>
+        <span class="far fa-envelope"></span>
+        <%= link_to t("layouts.footer.contact_email"),
+                    "mailto:info@stemvandantumadiel.frl" %>
+      </p>
+    </div>
+  </div>
+
+  <div class="subfooter row">
+    <% if feature?(:background_image_footer) %>
+      <div id="bg_footer" class="margin-bottom">
+        <%= image_tag(image_path_for("bg_footer.png"), alt: "") %>
+      </div>
+    <% end %>
+
+    <div class="small-12 medium-8 column">
+      <%= t("layouts.footer.copyright", version: "1.4.1", year: Time.current.year) %>
+      <ul class="no-bullet inline-block">
+        <li class="inline-block"><%= link_to t("layouts.footer.privacy"), page_path("privacy") %>&nbsp;|</li>
+        <li class="inline-block"><%= link_to t("layouts.footer.conditions"), page_path("gebruikersvoorwaarden") %>&nbsp;|</li>
+        <li class="inline-block"><%= link_to t("layouts.footer.accessibility"), page_path("toegankelijkheid") %></li>
+      </ul>
+    </div>
+
+    <div class="small-12 medium-4 column social">
+      <%= render Layout::SocialComponent.new %>
+    </div>
+  </div>
+</footer>
