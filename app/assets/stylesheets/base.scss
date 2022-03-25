@@ -937,15 +937,9 @@ body > header,
 
 .feeds-participation {
 
-  @include breakpoint(medium) {
-
-    .feed-proposals:not(:only-child) {
-      width: 100%;
-    }
-
-    .feed-debates:not(:only-child) {
-      width: 100%;
-    }
+  .feed-proposals,
+  .feed-debates {
+    flex-basis: max-content;
   }
 }
 
