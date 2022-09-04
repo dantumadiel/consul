@@ -52,3 +52,6 @@ nl:
         title: "Stuur verificatie instructies opnieuw"
       show:
         submit: "Bevestig"
+    mailer:
+      confirmation_instructions:
+        text: "Je moet je account bevestigen om mee te kunnen doen. Dit doe je door te klikken op de volgende link:"
