@@ -387,6 +387,13 @@ aside {
   }
 }
 
+.document-link {
+
+  .button {
+    min-height: 0;
+  }
+}
+
 .tabs {
   border-bottom: 4px solid $light;
 
@@ -394,6 +401,11 @@ aside {
     margin-bottom: 0;
 
     > a {
+
+      &:focus,
+      &[aria-selected="true"] {
+        background: transparent;
+      }
 
       &[aria-selected="true"]::after,
       .is-active::after {
@@ -737,6 +749,7 @@ body > header,
     background: #fff;
     min-width: rem-calc(240);
     width: max-content;
+    z-index: 10;
 
     li {
       display: block;
@@ -1083,6 +1096,13 @@ footer {
       color: #fff;
     }
   }
+
+  p {
+
+    &.info {
+      font-size: $small-font-size;
+    }
+  }
 }
 
 .footer {
@@ -1123,7 +1143,7 @@ footer {
   border-top: 0;
   font-size: $small-font-size;
   margin-top: $line-height * 2;
-  padding: $line-height 0;
+  padding-top: $line-height;
 
   ul {
     padding-left: $line-height / 4;
@@ -1560,6 +1580,8 @@ footer {
 }
 
 .supported .button.button-remove-support {
+  background: none;
+  border: 1px solid $brand;
   box-shadow: none;
   color: $brand-secondary;
 
@@ -1586,6 +1608,16 @@ footer {
   .budget-next-phase::before,
   .budget-next-phase-disabled::before {
     left: 52px;
+  }
+
+  .budget-phase {
+
+    @include breakpoint(medium) {
+
+      > * {
+        word-break: break-word;
+      }
+    }
   }
 }
 
@@ -1642,6 +1674,14 @@ footer {
   &::after {
     border-color: $brand-secondary;
     color: $brand-secondary;
+  }
+}
+
+.budget-ballot-show {
+  margin-top: rem-calc(-$line-height);
+
+  .back {
+    margin-top: $line-height;
   }
 }
 
@@ -2040,7 +2080,7 @@ footer {
 }
 
 .legislation-list .legislation p {
-  word-break: break-all;
+  word-break: break-word;
 }
 
 // 6. Comments
@@ -2181,7 +2221,7 @@ footer {
 
   .in-favor,
   .against {
-    background: $light;
+    background: none;
     display: inline-block;
     margin-left: $line-height / 4;
     text-align: center;
@@ -2558,6 +2598,10 @@ footer {
       }
     }
   }
+
+  .callout .small:not(.button)::after {
+    content: none;
+  }
 }
 
 .supports-container {
@@ -2840,12 +2884,6 @@ footer {
     right: 12px;
     top: 0;
   }
-
-  .zoom-link,
-  .orbit-caption,
-  .orbit-controls {
-    display: none;
-  }
 }
 
 // 12. Users
@@ -2902,6 +2940,17 @@ footer {
 
 .verification button {
   min-height: 0;
+}
+
+.subscriptions-edit {
+
+  form {
+    max-width: none;
+  }
+
+  h2 {
+    margin-bottom: $line-height;
+  }
 }
 
 // 13. Custom
