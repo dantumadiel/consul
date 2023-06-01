@@ -4,6 +4,7 @@
 // folder and they will be loaded automatically.
 // 1. General
 // 2. Admin
+// 3. Polls
 //
 
 // 1. General
@@ -35,5 +36,15 @@ a {
 
   a {
     flex-grow: unset;
+  }
+}
+
+// 3. Polls
+// --------------------
+
+.polls-show {
+
+  h1 {
+    font-size: rem-calc(34);
   }
 }
