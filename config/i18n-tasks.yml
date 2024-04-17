@@ -130,8 +130,11 @@ ignore_missing:
   - "budgets.progress_bar.you_have_assigned"
   - "admin.officials.index.help_link"
   - "debates.index.section_footer.help_text_link"
+  - "admin.settings.index.map.*"
   - "layouts.footer.contact_title"
   - "layouts.footer.contact_email"
+  - "layouts.footer.participation_*"
+  - "layouts.header.open_gov"
 
 ## Consider these keys used:
 ignore_unused:
